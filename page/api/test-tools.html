@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>   
+<meta name="description" content="不超过150个字符"/>       
+<meta name="keywords" content=""/>     
+<title>小love容儿开放平台-测试工具</title>
+<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css">
+<link rel="stylesheet" type="text/css" href="../../css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../css/style/index.css">
+<link rel="stylesheet" type="text/css" href="../../css/prettify.css">
+</head>
+<body onload="prettyPrint()">
+	<section class="page-index-top">
+		<div class="page-container" style="overflow: visible;">
+			<div class="page-header">
+				<div class="logo"><img src="../../images/logo_03.jpg" alt=""></div>
+				<ul class="layui-nav">
+					<li class="layui-nav-item"><a href="../index.html">首页</a></li>
+					<li class="layui-nav-item"><a href="../application-center.html">应用中心</a></li>
+					<li class="layui-nav-item layui-this"><a href="../interface-api.html">API</a></li>
+					<!-- <li class="layui-nav-item">
+					    <a href="javascript:;">解决方案</a>
+					    <dl class="layui-nav-child"> <!-- 二级菜单 -->
+					     <!--  <dd><a href="#">移动模块</a></dd>
+					      <dd><a href="#">后台模版</a></dd>
+					      <dd><a href="#">电商平台</a></dd>
+					    </dl>
+					</li> -->
+					<li class="layui-nav-item"><a href="../document-center.html">文档中心</a></li>
+					<li class="layui-nav-item"><a href="#">社区</a></li>
+				</ul>
+				<div class="page-index-login">
+					<ul class="page-login-group">
+						<li><a href="../login.html">登录</a></li>
+						<li><a href="../register.html">注册</a></li>
+						<li class="page-index-console"><a href="../console.html">控制台</a></li>
+						<li class="page-index-out">
+							<a href="javascript:;"><span class="icon iconfont el-icon-ve-yonghu"></span> 张三</a>
+							<ul class="page-sub-out">
+								<li><a href="javascript:;" class="icon iconfont el-icon-ve-dengchutuichuguanbi"> 退出</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="page-line"></div>
+	<div class="page-interface-content">
+		<div class="page-container">
+			<div class="layui-row page-tools-group">
+			  <div class="layui-col-md6 tools-left">
+				<p class="title">此功能是API测试工具，可以测试开放的接口，<span>暂时只开放测试环境api；</span></p>
+				<form class="layui-form">
+				  <div class="layui-form-item">
+				    <label class="layui-form-label">API分类：</label>
+				    <div class="layui-input-block">
+				      <input type="text" name="title" lay-verify="required" value="API分类" disabled class="layui-input">
+				    </div>
+				  </div>
+				  <div class="layui-form-item">
+				    <label class="layui-form-label">API方法名：</label>
+				    <div class="layui-input-block">
+				      <input type="text" name="title" lay-verify="required" value="API方法名" disabled class="layui-input">
+				    </div>
+				  </div>
+				  <div class="layui-form-item">
+				    <label class="layui-form-label">版本号：</label>
+				    <div class="layui-input-block">
+				      <input type="text" name="title" lay-verify="required" value="版本号" disabled class="layui-input">
+				    </div>
+				  </div>
+				  <div class="layui-form-item">
+				    <label class="layui-form-label">access_token：</label>
+				    <div class="layui-input-block">
+				      <input type="text" name="title" lay-verify="required" placeholder="access_token" autocomplete="off" class="layui-input">
+				    </div>
+				  </div>
+				  <div class="layui-form-item">
+				    <label class="layui-form-label">app_key：</label>
+				    <div class="layui-input-block">
+				      <input type="text" name="title" lay-verify="required" placeholder="app_key" autocomplete="off" class="layui-input">
+				    </div>
+				  </div>
+				  <div class="layui-form-item">
+				    <label class="layui-form-label">app_secret：</label>
+				    <div class="layui-input-block">
+				      <input type="text" name="title" lay-verify="required" placeholder="app_secret" autocomplete="off" class="layui-input">
+				    </div>
+				  </div>
+				  <div class="layui-form-item">
+				    <label class="layui-form-label" style="font-size: 16px;">接口参数</label>
+				  </div>
+				  <div class="layui-form-item">
+				    <label class="layui-form-label">name：</label>
+				    <div class="layui-input-block">
+				      <input type="text" name="title" lay-verify="required" placeholder="name" autocomplete="off" class="layui-input">
+				    </div>
+				  </div>
+				  <div class="layui-form-item">
+				    <label class="layui-form-label">identity_no：</label>
+				    <div class="layui-input-block">
+				      <input type="text" name="title" lay-verify="required" placeholder="identity_no" autocomplete="off" class="layui-input">
+				    </div>
+				  </div>
+				  <div class="layui-form-item">
+				    <div class="layui-input-block">
+				      <button class="layui-btn layui-btn-normal" lay-submit lay-filter="submit">提交测试</button>
+				    </div>
+				  </div>
+				</form>
+			  </div>
+			  <div class="layui-col-md6 tools-right">
+				<div class="layui-form-item layui-form-text">
+				    <label class="layui-form-label">提交参数：</label>
+				    <div class="layui-input-block">
+				      <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+				    </div>
+				</div>
+				<div class="layui-form-item layui-form-text">
+				    <label class="layui-form-label">返回结果：</label>
+				    <div class="layui-input-block">
+				      <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+				    </div>
+				</div>
+				<div class="layui-form-item layui-form-text">
+				    <label class="layui-form-label">SDK调用：</label>
+				    <div class="layui-input-block">
+				      <pre class="prettyprint" style="text-align: left">
+
+	public class Thread1 implements Runnable {
+		Object lock;
+		public void run() {  
+		   synchronized(lock){
+		     ..do something
+		   }
+		}
+	}
+
+					  </pre>
+				    </div>
+				</div>
+			  </div>
+			</div>	
+		</div>
+	</div>
+	<footer class="page-index-footer tc">
+		<div class="page-container">
+			<ul class="page-index-link">
+				<li><a href="#">关于平台</a></li>
+				<li><a href="#">联系平台</a></li>
+				<li><a href="#">人才招聘</a></li>
+				<li><a href="#">平台服务</a></li>
+				<li><a href="#">平台资讯</a></li>
+				<li><a href="#">平台文化</a></li>
+			</ul>
+			<p class="page-copyright">Copyright © 2015-2021 小love容儿开放平台版权所有|豫ICP备66666号-2.</p>
+		</div>
+	</footer>
+</body>
+<script src="../../layui/layui.js"></script>
+<script src="../../prettify.js"></script>
+<script>
+//注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+layui.use(['element', 'form'], function(){
+  var element = layui.element,
+  	  form = layui.form;
+  
+  //监听提交
+  form.on('submit(submit)', function(data){
+    layer.msg(JSON.stringify(data.field));
+    return false;
+  });
+
+});
+</script>
+</html>

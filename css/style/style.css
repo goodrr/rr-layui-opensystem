@@ -1,0 +1,89 @@
+* { margin: 0; padding: 0; }
+
+.layui-btn-normal { background-color: #0984e3; }
+
+.page-line { height: 10px; background-color: #eee; border-top: 1px solid #ddd; margin-top: -1px; }
+
+.page-login-wrap { background-color: #fff; position: relative; }
+.page-login-wrap .page-login { height: 96px; border-bottom: 1px solid #ddd; display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+.page-login-wrap .page-login .logo { display: inline-block; margin-top: 26px; }
+.page-login-wrap .page-login .logo img { height: 60px; border-radius: 40px; margin-right: 5px; }
+.page-login-wrap .page-login .login-title { display: inline-block; font-size: 17px; }
+.page-login-wrap .page-login .login-back-index { float: right; color: #0984e3; font-size: 16px; margin-top: 25px; }
+
+.page-login-content .page-login-group { padding: 80px 40px; }
+.page-login-content .page-login-model { border: 1px solid #ddd; margin: 0; margin-left: 4px; }
+.page-login-content .page-login-model .item-row { display: flex; flex-direction: row; height: 45px; border: none; padding: 10px 45px; }
+.page-login-content .page-login-model .item-row li { width: 50%; line-height: 50px; font-size: 18px; }
+.page-login-content .page-login-model .item-row li.layui-this { border: none; color: #0984e3; border-bottom: 2px solid #0984e3; }
+.page-login-content .page-login-model .layui-tab-title .layui-this:after { border: none; }
+.page-login-content .page-login-model .other-login li { display: inline-block; height: 37px; width: 40px; background: url(../../images/icon/sns_icons_2x.png) left top no-repeat; background-size: 132px 70px; }
+.page-login-content .page-login-model .other-login li:nth-child(1) { background-position: -47px 2px; transition: all 0.1s; }
+.page-login-content .page-login-model .other-login li:nth-child(2) { background-position: 2px 2px; transition: all 0.1s; }
+.page-login-content .page-login-model .other-login li:hover { cursor: pointer; }
+.page-login-content .page-login-model .other-login li:hover:nth-child(1) { background-position: -47px -35px; }
+.page-login-content .page-login-model .other-login li:hover:nth-child(2) { background-position: 2px -35px; }
+.page-login-content .page-login-model .page-register { float: right; color: #0984e3; margin-top: -30px; margin-right: 45px; }
+.page-login-content .page-login-form { height: 226px; padding: 10px 40px 10px 20px; }
+.page-login-content .page-login-form .layui-form-label { width: 50px; font-size: 16px; }
+.page-login-content .page-login-form .layui-input-block { margin-left: 85px; }
+.page-login-content .page-login-form .page-forget { float: right; color: #0984e3; margin-bottom: 5px; }
+.page-login-content .page-login-form .page-login-code { display: inline-block; width: 150px; }
+.page-login-content .page-login-form .page-code-img { display: inline-block; height: 37px; width: 100px; vertical-align: middle; }
+.page-login-content .page-login-form .page-code-img .code { height: 98%; width: 100%; text-align: center; background-color: #faf3f2; border: 1px solid #ddd; margin-top: -2px; }
+.page-login-content .page-login-form .page-code-mess { display: inline-block; height: 39px; width: 150px; line-height: 39px; vertical-align: middle; background-color: #0984e3; color: #fff; margin-top: -2px; }
+.page-login-content .page-login-form .page-code-text { color: #999; cursor: pointer; }
+
+.page-register-content .item-row { display: flex; flex-direction: row; height: 75px; border: none; padding: 10px 140px; margin-top: 25px; }
+.page-register-content .item-row li { width: 50%; line-height: 54px; font-size: 16px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+.page-register-content .item-row li.layui-this { border: none; color: #0984e3; border-bottom: 2px solid #0984e3; }
+.page-register-content .item-row li.layui-this .item-round { background: url(../../images/icon/friend-icona.png) left top no-repeat; background-size: 50px 52px; }
+.page-register-content .item-row .item-round { display: inline-block; height: 50px; width: 52px; font-size: 22px; color: #fff; margin-right: 10px; background: url(../../images/icon/friend-iconb.png) left top no-repeat; background-size: 50px 52px; }
+.page-register-content .layui-tab-title .layui-this:after { border: none; }
+.page-register-content .page-register-group { width: 430px; margin-top: 40px; margin-left: auto; margin-right: auto; padding: 20px 20px 60px 20px; }
+.page-register-content .page-register-group .page-register-row { display: none; }
+.page-register-content .page-register-group .page-register-row.layui-show { display: block; }
+.page-register-content .page-register-group .page-register-row .error-info { display: none; font-size: 13px; color: red; }
+.page-register-content .page-register-group .page-register-row .require-info { color: red; }
+.page-register-content .page-register-group .item-title { margin-bottom: 55px; }
+.page-register-content .page-register-group .item-title span { font-size: 38px; color: #11b411; margin-right: 8px; }
+.page-register-content .page-register-group .item-button-wrap { padding: 20px 60px; }
+.page-register-content .page-register-form .layui-form-label { width: 95px; font-size: 16px; }
+.page-register-content .page-register-form .layui-input-block { margin-left: 125px; }
+.page-register-content .page-register-form .page-forget { float: right; color: #0984e3; margin-bottom: 5px; }
+.page-register-content .page-register-form .page-login-code { display: inline-block; width: 150px; }
+.page-register-content .page-register-form .page-code-img { display: inline-block; height: 37px; width: 95px; vertical-align: middle; }
+.page-register-content .page-register-form .page-code-img .code { height: 98%; width: 100%; text-align: center; background-color: #faf3f2; border: 1px solid #ddd; margin-top: -2px; cursor: pointer; }
+.page-register-content .page-register-form .register-code { float: right; padding: 0 26px; margin-top: -38px; }
+.page-register-content .page-register-form .register-checkbox { height: 30px; line-height: 30px; }
+.page-register-content .page-register-form .register-checkbox a { color: #0984e3; }
+.page-register-content .page-register-form .page-code-text { color: #0984e3; cursor: pointer; }
+.page-register-content .page-register-form .layui-form-checkbox[lay-skin=primary]:hover i { border-color: #0984e3; }
+.page-register-content .page-register-form .layui-form-checked[lay-skin=primary] i { border-color: #0984e3; background-color: #0984e3; }
+.page-register-content .layui-form-item .layui-form-checkbox[lay-skin=primary] { margin-top: -3px; }
+.page-register-content .layui-form-item .layui-form-checkbox[lay-skin=primary] span { padding: 0; }
+
+.page-forget-password { margin-bottom: 40px; }
+.page-forget-password .title { height: 45px; line-height: 45px; text-align: center; margin-top: 20px; }
+.page-forget-password .page-forget-progress { width: 650px; display: flex; flex-direction: row; margin: 50px auto; }
+.page-forget-password .page-forget-progress li { height: 30px; text-align: center; line-height: 30px; background-color: #eee; margin-right: 4px; padding: 0 30px; position: relative; }
+.page-forget-password .page-forget-progress li:first-child { width: 160px; }
+.page-forget-password .page-forget-progress li:first-child:before { display: none; }
+.page-forget-password .page-forget-progress li:nth-child(2) { width: 180px; }
+.page-forget-password .page-forget-progress li:nth-child(3) { width: 150px; }
+.page-forget-password .page-forget-progress li:nth-child(3):after { display: none; }
+.page-forget-password .page-forget-progress li:before { display: inline-block; content: ''; height: 0; width: 0; border-top: 15px solid transparent; border-bottom: 15px solid transparent; border-left: 18px solid #fff; position: absolute; left: 0; top: 0; z-index: 98; }
+.page-forget-password .page-forget-progress li:after { display: inline-block; content: ''; height: 0; width: 0; border-top: 15px solid transparent; border-bottom: 15px solid transparent; border-left: 18px solid #eee; position: absolute; right: -18px; top: 0; z-index: 99; }
+.page-forget-password .page-forget-progress li.this-active { color: #fff; background-color: #0984e3; }
+.page-forget-password .page-forget-progress li.this-active:after { border-left: 18px solid #0984e3; }
+.page-forget-password .page-forget-content { min-height: 370px; width: 450px; margin: 0 auto; padding: 50px 30px; padding-right: 70px; }
+.page-forget-password .page-forget-content .find-button { color: #0984e3; text-align: right; margin-bottom: 15px; }
+.page-forget-password .page-forget-content .find-button span { cursor: pointer; }
+.page-forget-password .page-forget-content .require-icon { color: red; }
+.page-forget-password .page-forget-content .layui-form-item { margin-bottom: 30px; position: relative; }
+.page-forget-password .page-forget-content .error-info { display: none; color: red; position: absolute; left: 0; bottom: -18px; }
+.page-forget-password .page-forget-content .page-login-code { display: inline-block; width: 160px; }
+.page-forget-password .page-forget-content .find-email-group { display: none; }
+.page-forget-password #three, .page-forget-password #second { display: none; }
+
+/*# sourceMappingURL=style.css.map */

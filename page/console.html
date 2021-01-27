@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>   
+<meta name="description" content="不超过150个字符"/>       
+<meta name="keywords" content=""/>     
+<title>小love容儿开放平台-控制台</title>
+<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../css/style/index.css">
+</head>
+<body>
+	<section class="page-index-top">
+		<div class="page-container" style="overflow: visible;">
+			<div class="page-header">
+				<div class="logo"><img src="../images/logo_03.jpg" alt=""></div>
+				<ul class="layui-nav">
+					<li class="layui-nav-item"><a href="index.html">首页</a></li>
+					<li class="layui-nav-item"><a href="application-center.html">应用中心</a></li>
+					<li class="layui-nav-item"><a href="interface-api.html">API</a></li>
+					<li class="layui-nav-item"><a href="application-center.html">文档中心</a></li>
+					<li class="layui-nav-item"><a href="#">社区</a></li>
+				</ul>
+				<div class="page-index-login">
+					<ul class="page-login-group">
+						<li><a href="login.html">登录</a></li>
+						<li><a href="register.html">注册</a></li>
+						<li class="page-index-console"><a href="console.html">控制台</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="page-line"></div>
+	<div class="page-interface-content">
+		<div class="page-container">
+			<div class="page-slide-subnav page-documnet-nav">
+				<ul class="page-slide-group">
+				  <li class="layui-nav-item page-slide-show">
+				  	<a href="#">应用管理<span class="icon iconfont layui-icon-alimore el-icon-ve-more"></span></a>
+				  	<dl class="layui-nav-child">
+					    <dd class="page-nav-active">
+						    <a href="console/application-list.html" target="iframe.name" data-url="console/application-list">应用列表 </a>
+						</dd>
+					</dl>
+				  </li>
+				  <li class="layui-nav-item">
+				    <a href="javascript:;">开发者管理<span class="icon iconfont layui-icon-alimore el-icon-ve-more"></span></a>
+				    <dl class="layui-nav-child">
+				      <dd><a href="console/developer-list.html" data-url="console/developer-list">开发者列表</a></dd>
+				    </dl>
+				  </li>
+				  <li class="layui-nav-item">
+				    <a href="javascript:;">API管理<span class="icon iconfont layui-icon-alimore el-icon-ve-more"></span></a>
+				    <dl class="layui-nav-child">
+				      <dd><a href="console/api-list.html" data-url="console/api-list">API列表</a></dd>
+				      <dd><a href="console/data-type.html" data-url="console/data-type">数据类型</a></dd>
+				      <dd><a href="console/error-num.html" data-url="console/error-num">错误码</a></dd>
+				      <dd><a href="console/api-approval.html" data-url="console/api-approval">API审批</a></dd>
+				    </dl>
+				  </li>
+				  <li class="layui-nav-item">
+				    <a href="javascript:;">文档管理<span class="icon iconfont layui-icon-alimore el-icon-ve-more"></span></a>
+				    <dl class="layui-nav-child">
+				      <dd><a href="console/access-guide.html" data-url="console/access-guide">接入指南</a></dd>
+				      <dd><a href="console/common-problem.html" data-url="console/common-problem">常见问题</a></dd>
+				    </dl>
+				  </li>
+				</ul>
+			</div>
+			<div class="page-console-content">
+				<div class="layui-tab-iframe layui-show">
+					<iframe class="larry-iframe main-iframe" data-id='console/application-list.html' src="console/application-list.html" name="myiframe"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="page-index-footer tc">
+		<div class="page-container">
+			<ul class="page-index-link">
+				<li><a href="#">关于平台</a></li>
+				<li><a href="#">联系平台</a></li>
+				<li><a href="#">人才招聘</a></li>
+				<li><a href="#">平台服务</a></li>
+				<li><a href="#">平台资讯</a></li>
+				<li><a href="#">平台文化</a></li>
+			</ul>
+			<p class="page-copyright">Copyright © 2015-2021 小love容儿开放平台版权所有|豫ICP备66666号-2.</p>
+		</div>
+	</footer>
+</body>
+<script type="text/javascript" src="http://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+<script src="../layui/layui.js"></script>
+<script>
+//注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+layui.use('element', function(){
+  var element = layui.element;
+  
+  //…
+});
+$(function(){
+	$('.page-slide-group .layui-nav-item>a').click(function(){
+		var hre = $(this).children("a").attr("href");
+		if($(this).next().length>0){
+			$(this).parent().toggleClass('page-slide-show'); 
+		}
+	})
+
+	$('.page-slide-group .layui-nav-child dd').bind('click', openIframe);
+    function openIframe(){
+    	var hre = $(this).children("a").attr("href"),
+            txt = $.trim($(this).children("a").text());
+
+        if(!$(this).hasClass('page-nav-active')){
+            $(this).addClass("page-nav-active").siblings().removeClass("page-nav-active");
+            $(this).closest(".layui-nav-item").siblings().find(".page-nav-active").removeClass("page-nav-active");
+        }
+
+    	$(".layui-tab-iframe .larry-iframe").each(function() {
+            if ($(this).data("id") == hre) {
+                $(this).show().siblings(".larry-iframe").hide();
+                return false ;
+            }
+        }) 
+       
+    	var n = '<iframe class="larry-iframe main-iframe" name="' + txt + '" src="' + hre + '" data-id="' + hre + '"></iframe>';
+        $(".layui-tab-iframe").find(".larry-iframe").hide().parents(".layui-tab-iframe").append(n);
+
+        return false ; 
+        $('.page-slide-group .layui-nav-child dd').unbind('click', openIframe);
+    }
+})
+</script>
+</html>
